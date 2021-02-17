@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Profile = ({ name, tag, location, avatar, stats }) => {
+const Profile = ({ name, tag, location, stats, avatar }) => {
   return (
     <div className="profile">
       <div className="description">
@@ -31,6 +32,16 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
       </ul>
     </div>
   );
+};
+
+console.log(Profile);
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
+  stats: PropTypes.objectOf(PropTypes.number),
 };
 
 export default Profile;
