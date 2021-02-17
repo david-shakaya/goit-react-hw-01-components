@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Profile from './components/Profile';
+import Profile from './components/Profile/Profile';
 import user from './user.json';
 
 const App = () => {

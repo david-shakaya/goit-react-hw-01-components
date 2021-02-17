@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from './Profile.module.css';
 
 const Profile = ({ name, tag, location, stats, avatar }) => {
   return (
-    <div className="profile">
+    <div className={style.profile}>
       <div className="description">
         <img
           src={avatar}
@@ -33,8 +34,6 @@ const Profile = ({ name, tag, location, stats, avatar }) => {
     </div>
   );
 };
-
-console.log(Profile);
 
 Profile.propTypes = {
   name: PropTypes.string.isRequired,
