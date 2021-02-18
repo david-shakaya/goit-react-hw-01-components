@@ -64,9 +64,8 @@
 li {
   display: grid;
   list-style: none;
-  padding: 24px;
-  padding-left: 29px;
-  padding-bottom: 20px;
+  width: calc(100% / 3);
+  padding: 18px;
   background-color: aliceblue;
   outline: 0.1px #e4e4e4 solid;
   border-radius: 2px;
