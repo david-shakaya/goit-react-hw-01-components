@@ -5,6 +5,7 @@ import Profile from './components/Profile/Profile';
 import user from './user.json';
 import statisticalData from './statistical-data.json';
 import StatisticsList from './components/StatisticsList/StatisticsList';
+import '../src/base.css';
 
 const App = () => {
   return (

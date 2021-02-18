@@ -1,20 +1,36 @@
 import React from 'react';
 import StatisticItem from '../StatisticItem/StatisticItem';
 import PropTypes from 'prop-types';
+import style from './StatisticsList.module.css';
+
+const RandomColorForItem = () => {
+  const x = Math.random() * 255;
+  return x.toFixed(0);
+};
+
+console.log(RandomColorForItem());
 
 const StatisticsList = ({ statisticalData, title }) => {
   return (
-    <section className="statistics">
-      {title.length > 0 && <h2 className="title">{title}</h2>}
-      <ul className="stat-list">
-        {statisticalData.map(({ id, label, percentage }) => {
-          return (
-            <li key={id} className="item">
-              {<StatisticItem format={label} percent={percentage} />}
-            </li>
-          );
-        })}
-      </ul>
+    <section className={style.Statistics}>
+      <div>
+        {title.length > 0 && <h2 className="title">{title}</h2>}
+        <ul className={style.Stat__list}>
+          {statisticalData.map(({ id, label, percentage }) => {
+            return (
+              <li
+                key={id}
+                className="item"
+                style={{
+                  backgroundColor: `rgb(${RandomColorForItem()}, ${RandomColorForItem()}, ${RandomColorForItem()})`,
+                }}
+              >
+                {<StatisticItem format={label} percent={percentage} />}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </section>
   );
 };
