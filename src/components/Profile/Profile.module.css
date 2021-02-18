@@ -61,7 +61,7 @@
   padding: 0px;
 }
 
-li {
+.Stats li {
   display: grid;
   list-style: none;
   width: calc(100% / 3);
