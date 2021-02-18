@@ -1,8 +1,19 @@
 import React from 'react';
-
+import FriendListItem from '../FriendListItem/FriendListItem';
 const FriendList = ({ friends }) => {
-  console.log(friends);
-  return <ul className="friend-list"></ul>;
+  return (
+    <ul className="friend-list">
+      {friends.map(({ avatar, name, isOnline }) => {
+        return (
+          <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
+        );
+      })}
+    </ul>
+  );
 };
 
 export default FriendList;
+
+// avatar - ссылка на аватар
+// name - имя друга
+// isOnline
