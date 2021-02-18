@@ -8,8 +8,6 @@ const RandomColorForItem = () => {
   return x.toFixed(0);
 };
 
-console.log(RandomColorForItem());
-
 const StatisticsList = ({ statisticalData, title }) => {
   return (
     <section className={style.Statistics}>
