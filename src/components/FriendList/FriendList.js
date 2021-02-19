@@ -1,5 +1,6 @@
 import React from 'react';
 import FriendListItem from '../FriendListItem/FriendListItem';
+import PropTypes from 'prop-types';
 const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
@@ -17,8 +18,13 @@ const FriendList = ({ friends }) => {
   );
 };
 
-export default FriendList;
+// Так  можно прописать тип для итерируемого масива обьектов
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ),
+};
 
-// avatar - ссылка на аватар
-// name - имя друга
-// isOnline
+export default FriendList;

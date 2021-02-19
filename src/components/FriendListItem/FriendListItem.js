@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './FriendListItem.module.css';
-
-// FriendListItem avatar={avatar} name={name} isOnline={isOnline} />;
+import PropTypes from 'prop-types';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
@@ -17,4 +16,14 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
   );
 };
 
+FriendListItem.defaultProps = {
+  avatar:
+    'https://cdn.pixabay.com/photo/2020/08/17/17/43/page-not-found-5496035_960_720.png',
+};
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+};
 export default FriendListItem;
