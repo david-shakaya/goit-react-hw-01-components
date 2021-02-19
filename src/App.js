@@ -7,7 +7,9 @@ import statisticalData from './statistical-data.json';
 import StatisticsList from './components/StatisticsList/StatisticsList';
 import '../src/base.css';
 import friends from './friends.json';
+import transactions from './transactions.json';
 import FriendList from './components/FriendList/FriendList';
+import TransactionsList from './components/Transactions/TransactionsList';
 
 const App = () => {
   return (
@@ -24,6 +26,7 @@ const App = () => {
         title={'Upload stats'}
       />
       <FriendList friends={friends} />
+      <TransactionsList Transactions={transactions} />
     </>
   );
 };
